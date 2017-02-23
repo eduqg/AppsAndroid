@@ -1,15 +1,12 @@
 package application1.com.app1androidudemy;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -39,8 +36,16 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 textOne.setText("O botão foi clicado");
+                System.out.println("Botao 1 clicado");
+                //Toast mostra uma mensagem na tela
+                Toast.makeText(getApplicationContext(), "Funcionou!", Toast.LENGTH_SHORT).show();
             }
         });
+
+        //Para a imagem
+        ImageView imageOne = (ImageView)findViewById(R.id.imageView);
+        imageOne.setImageResource(R.drawable.android1);
+
 
     }
 

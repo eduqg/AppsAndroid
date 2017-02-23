@@ -13,23 +13,23 @@
     tools:context="application1.com.app1androidudemy.MainActivity"
     tools:showIn="@layout/activity_main">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        android:id="@+id/textOne"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="51dp" />
-
     <Button
         android:text="Button"
         android:layout_width="400px"
         android:layout_height="wrap_content"
         android:id="@+id/buttonOne"
-        android:layout_marginBottom="94dp"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="12dp" />
+
+    <ImageView
+        android:layout_width="200px"
+        android:layout_height="200px"
+        app:srcCompat="@drawable/android1"
+        android:id="@+id/imageView"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/checkBoxOne"
+        android:layout_alignStart="@+id/checkBoxOne" />
 
     <CheckBox
         android:text="CheckBox"
@@ -38,15 +38,34 @@
         android:id="@+id/checkBoxOne"
         android:layout_above="@+id/buttonOne"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="46dp" />
+        android:layout_marginBottom="14dp" />
 
     <TextView
         android:text="Clique aqui"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
         android:id="@+id/textTwo"
+        android:onClick="buttonTwoClick"
+        android:layout_marginTop="36dp"
         android:layout_below="@+id/textOne"
-        android:layout_centerHorizontal="true"
-        android:onClick="buttonTwoClick" />
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="200px"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        android:id="@+id/textOne"
+        android:layout_marginTop="36dp"
+        android:layout_below="@+id/imageView"
+        android:layout_alignLeft="@+id/imageView"
+        android:layout_alignStart="@+id/imageView" />
+
+    <Button
+        android:text="@string/RotuloBotao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button"
+        android:layout_above="@+id/checkBoxOne"
+        android:layout_alignRight="@+id/textOne"
+        android:layout_alignEnd="@+id/textOne" />
 </RelativeLayout>
